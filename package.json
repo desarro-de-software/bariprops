@@ -4,6 +4,7 @@
   "description": "Proyecto para primer año 2021 de la carrera de de Desarrollo de Software en el ISP",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6"
