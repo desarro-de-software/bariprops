@@ -1,0 +1,29 @@
+paths:
+  /publications:
+    get:
+      tags:
+        - Publications
+      summary: Return a list of publications
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array with the publications
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/publications"
+definitions: # Schema defination for request body
+  publications:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        title:
+          type: string
+        owner:
+          type: string

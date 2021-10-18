@@ -1,0 +1,26 @@
+{
+  "name": "bariprops",
+  "version": "1.0.0",
+  "description": "Proyecto para primer año 2021 de la carrera de de Desarrollo de Software en el ISP",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desarro-de-software/bariprops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desarro-de-software/bariprops/issues"
+  },
+  "homepage": "https://github.com/desarro-de-software/bariprops#readme"
+}
