@@ -3,7 +3,7 @@ const getPeople = async (req, res, next) => {
     const people = [];
     res.json(people);
   } catch (error) {
-    console.log("error on getDocuments", error);
+    console.log("error on getPeople", error);
   }
 };
 
