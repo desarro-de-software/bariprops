@@ -1,0 +1,29 @@
+paths:
+  /publications:
+    get:
+      tags:
+        - Califications
+      summary: Return a list of califications
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array with the califications
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/califications"
+definitions: # Schema defination for request body
+  califications:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        title:
+          type: string
+        owner:
+          type: string
