@@ -1,0 +1,29 @@
+paths:
+  /people:
+    get:
+      tags:
+        - People
+      summary: Return a list of people
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array with the people
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/people"
+definitions: # Schema defination for request body
+  people:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        address:
+          type: string
