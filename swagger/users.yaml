@@ -21,14 +21,5 @@ definitions: # Schema defination for request body
       properties:
         id:
           type: string
-        name:
-          type: string
         username:
           type: string
-        email:
-          type: string
-        phone:
-          type: integer
-        birthday:
-          type: string
-          format: date
