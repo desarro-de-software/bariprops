@@ -6,5 +6,4 @@ describe("GET /api/people", function () {
     const resp = await request(app).get("/api/people").send();
     expect(resp.body).toBeInstanceOf(Array);
     expect(resp.statusCode).toEqual(200);
-  });
 });
