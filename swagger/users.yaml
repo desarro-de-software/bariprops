@@ -1,0 +1,25 @@
+paths:
+  /users:
+    get:
+      tags:
+        - Publications
+      summary: Return a list of users
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array with the users
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/users"
+definitions: # Schema defination for request body
+  users:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        username:
+          type: string
