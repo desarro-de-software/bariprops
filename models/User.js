@@ -3,9 +3,8 @@ module.exports = (connection) => {
 
   return connection.define("users", {
     id: {
-      type: sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      type: sequelize.UUID,
+      primaryKey: true
     },
     username: sequelize.STRING,
     password: sequelize.STRING

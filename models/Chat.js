@@ -3,9 +3,8 @@ module.exports = (Connection) => {
 
   return Connection.define("chats", {
     id: {
-      type: sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      type: sequelize.UUID,
+      primaryKey: true
     },
     name: sequelize.STRING
   });

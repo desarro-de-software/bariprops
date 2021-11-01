@@ -1,13 +1,11 @@
+module.exports = (connection) => {
+  const sequelize = require("sequelize");
 
-module.exports = (connection)=> {
-    const sequelize = require("sequelize");
-
-    return connection.define('messages',{
-        id: {
-            type: sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        } ,
-        message: sequelize.STRING
-    });
-}
+  return connection.define("messages", {
+    id: {
+      type: sequelize.UUID,
+      primaryKey: true
+    },
+    message: sequelize.STRING
+  });
+};
