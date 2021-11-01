@@ -1,13 +1,14 @@
 module.exports = (connection) => {
   const sequelize = require("sequelize");
 
-  return connection.define("users", {
+  return connection.define("people", {
     id: {
       type: sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    username: sequelize.STRING,
-    password: sequelize.STRING
+    name: sequelize.STRING,
+    email: sequelize.STRING,
+    address: sequelize.STRING
   });
 };

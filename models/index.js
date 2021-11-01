@@ -8,6 +8,7 @@ module.exports = (Connection) => {
   const status = require("./Status");
   const photo = require("./Photo");
   const chat = require("./Chat");
+  const person = require("./Person");
 
   const userModel = user(Connection);
   const favoriteModel = favorite(Connection);
@@ -18,6 +19,7 @@ module.exports = (Connection) => {
   const statusModel = status(Connection);
   const photoModel = photo(Connection);
   const chatModel = chat(Connection);
+  const personModel = person(Connection);
 
   propertyModel.belongsTo(categoryModel, {
     foreignKey: "category_id",
@@ -30,6 +32,10 @@ module.exports = (Connection) => {
   propertyModel.hasOne(statusModel, {
     foreignKey: "status_id",
     onDelete: "RESTRICT"
+  });
+  personModel.hasOne(userModel, {
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
   });
   messageModel.belongsTo(userModel, {
     foreignKey: "user_id",
@@ -65,6 +71,7 @@ module.exports = (Connection) => {
     Type: typeModel,
     Status: statusModel,
     Photo: photoModel,
-    Chat: chatModel
+    Chat: chatModel,
+    Person: personModel
   };
 };
