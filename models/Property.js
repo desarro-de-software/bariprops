@@ -3,9 +3,8 @@ module.exports = (connection) => {
 
   return connection.define("properties", {
     id: {
-      type: sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      type: sequelize.UUID,
+      primaryKey: true
     },
     title: sequelize.STRING,
     /* category_id: ,

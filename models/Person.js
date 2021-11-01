@@ -3,9 +3,8 @@ module.exports = (connection) => {
 
   return connection.define("people", {
     id: {
-      type: sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      type: sequelize.UUID,
+      primaryKey: true
     },
     name: sequelize.STRING,
     email: sequelize.STRING,
